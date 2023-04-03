@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Main</title>
         <meta charset="UTF-8">
@@ -9,27 +9,43 @@
     </head>
     <body>
         <h2>welcome</h2>
-        <label>Start hour: </label>
         <div class="instruction">Insert start hour. Example: 14:00</div>
         <br>
-        <input type="text" id="startHour" size="5">
+       
+        <div class="container">
+        <div class="input">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec ligula blandit, pellentesque nulla at, egestas lectus. Nunc at finibus urna, non finibus leo. Fusce diam justo, dapibus non</div>
         <br>
-        <label>End hour: </label>
-        <br>
-        <input type="text" id="endHour" size="5">
-        <br>
-        <br>
+        <div class="group">      
+            <input type="text" required id="startHour">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Start hour</label>
+          </div>
+        <div class="group">      
+            <input type="text" required id="endHour">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>End hour</label>
+            <br>
+            <div id="answer"></div>
+            <div id="answer2"></div>
+          </div>
+        
         <input type="button" onclick="Show()" value="Count hour" class="button">
         
-        <div id="answer"></div>
-        <div id="answer2"></div>
+        <br>
+        
         <div id="answer4"></div>
         <br>
-        <label>Hourly wages: </label>
-        <br>
-        <input type="text" id="amount" size="5">
-        <br><br> 
+        <div class="group">      
+            <input type="text" required id="amount">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Hour wages</label>
+          </div>
         <input type="button" onclick="CountSalary()" value="Count salary" class="button">
         <div id="asnwer3"></div>
+    </div>
+
     </body>
 </html>
