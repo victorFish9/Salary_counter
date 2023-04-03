@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script>
+            let sum = 0;
+            function Show(){
+                var input1 = document.getElementById("startHour").value;
+                var input2 = document.getElementById("endHour").value;
+                //document.getElementById("answer").innerHTML = "Answer is " + (input2-input1);
+                var a = new Date("12 May, 2018 " + input1);
+                var b = new Date("12 May, 2018 " + input2);
+                var c = new Date("12 may, 2018 18:00")
+                var hours = Math.abs(b - a) / 36e5;
+                
+                if (b > c){
+                    console.log((b - c) / 36e5)
+                }
+
+                document.getElementById("answer").innerHTML = "Workhour is " + hours;
+                sum += hours;
+                document.getElementById("answer2").innerHTML = "Sum hour: " +(sum);
+            }
+            function CountSalary(){
+                var input1 = document.getElementById("amount").value;
+
+                var salary = sum * input1
+
+                document.getElementById("asnwer3").innerHTML = "Salary gonna be " + Math.round(salary);
+            }
+        </script>
+    </head>
+    <body>
+        <h2>welcome</h2>
+        <label>Start hour: </label>
+        <br>
+        <input type="text" id="startHour" size="5">
+        <br>
+        <label>End hour: </label>
+        <br>
+        <input type="text" id="endHour" size="5">
+        <br>
+        <br>
+        <input type="button" onclick="Show()" value="Count hour" class="button">
+        
+        <div id="answer"></div>
+        <div id="answer2"></div>
+        <br>
+        <label>Hourly wages: </label>
+        <br>
+        <input type="text" id="amount" size="5">
+        <br><br> 
+        <input type="button" onclick="CountSalary()" value="Count salary" class="button">
+        <div id="asnwer3"></div>
+    </body>
+</html>
