@@ -11,4 +11,9 @@ input[type=text]:focus{
 }
 body{
     text-align: center;
+    
+}
+.instruction{
+    float: left;
+    position: absolute;
 }
