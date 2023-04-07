@@ -22,10 +22,13 @@ function Show(){
 }
 function CountSalary(){
     var input1 = document.getElementById("amount").value;
-
-    var salary = sum * input1
     var evening_salary = evening_increase * 1.33;
-    console.log(evening_salary);
+    var salary = sum * input1 + evening_salary;
+    var tyel = 7.15 / 100 * salary;
+    var unemployment = 1.50 / 100 * salary;
+    salary -= tyel;
+    salary -= unemployment;
+    console.log(unemployment);
 
-    document.getElementById("asnwer3").innerHTML = "Salary gonna be " + Math.round(salary);
+    document.getElementById("asnwer3").innerHTML = "Salary gonna be " + Math.round(salary * 100) / 100;
 }
