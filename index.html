@@ -3,6 +3,7 @@
     <head>
         <title>Main</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="script.js"></script>
@@ -15,37 +16,38 @@
         <div class="container">
         <div class="input">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec ligula blandit, pellentesque nulla at, egestas lectus. Nunc at finibus urna, non finibus leo. Fusce diam justo, dapibus non</div>
         <br>
-        <div class="group">      
-            <input type="text" required id="startHour">
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Start hour</label>
+        <div class="input-group input-group-sm mb-3">
+          
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Start hour</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="startHour">
+            </div>
+            
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">End hour</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="endHour">
+            </div>
+            
+            <input type="button" onclick="Show()" value="Count hour" class="btn btn-primary btn-lg">
+          
           </div>
-        <div class="group">      
-            <input type="text" required id="endHour">
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>End hour</label>
-        </div>
-        <div id="answer2"></div>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Hour wages</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="amount">
+            </div>
+            <input type="button" onclick="CountSalary()" value="Count salary" class="btn btn-primary btn-lg">
+          </div>
         <div id="answer"></div>
-        <br>
-        <input type="button" onclick="Show()" value="Count hour" class="button">
-        
-        <br>
-        
+        <div id="answer2"></div>
         <div id="answer4"></div>
-        <br>
-        <div class="group">      
-            <input type="text" required id="amount">
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Hour wages</label>
-          </div>
         <div id="asnwer3"></div>
-        <br>
-        <input type="button" onclick="CountSalary()" value="Count salary" class="button">
-    </div>
-
+        
     </body>
 </html>
