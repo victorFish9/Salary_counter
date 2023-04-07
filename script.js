@@ -11,7 +11,7 @@ function Show(){
 
     if (b > c){
         evening_increase += Math.abs(b - c) / 36e5;
-        console.log(evening_increase)
+        
 
         document.getElementById("answer4").innerHTML = "Eveining increase: " + evening_increase;
     }
@@ -28,7 +28,7 @@ function CountSalary(){
     var unemployment = 1.50 / 100 * salary;
     salary -= tyel;
     salary -= unemployment;
-    console.log(unemployment);
+    
 
     document.getElementById("asnwer3").innerHTML = "Salary gonna be " + Math.round(salary * 100) / 100;
 }
